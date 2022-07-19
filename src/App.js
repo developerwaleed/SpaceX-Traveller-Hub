@@ -1,11 +1,16 @@
-import './App.css';
-import Example from './components/NavBar/Navbar';
-
+import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import Example from "./components/NavBar/Navbar";
+import MyProfile from "./components/MyProfile";
 function App() {
   return (
     <>
-      <Example />
+    <Example />
+    <Routes>
+      <Route path="/myprofile" element={<MyProfile/>}/>
+    </Routes>
     </>
+    
   );
 }
 
