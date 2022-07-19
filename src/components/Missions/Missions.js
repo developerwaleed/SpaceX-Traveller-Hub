@@ -9,7 +9,6 @@ function Missions() {
     dispatch(fetchMissions());
   }, [dispatch]);
   const missions = useSelector((state) => state.mymissons.missions);
-  console.log('missions=', missions);
   return (
     <>
       <div className="overflow-x-auto relative shadow-md sm:rounded-lg">
@@ -31,46 +30,31 @@ function Missions() {
             </tr>
           </thead>
           <tbody>
-            <tr className="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
-              <th
-                scope="row"
-                className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+            {missions.map((item) => (
+              <tr
+                className="bg-white border-b dark:bg-gray-900 dark:border-gray-700"
+                key={item.mission_id}
               >
-                Apple MacBook Pro 17
-              </th>
-              <td colSpan="4" className="py-4 px-6">
-                lorem34
-              </td>
-              <td className="py-4 px-6">$2999</td>
-              <td className="py-4 px-6">
-                <a
-                  href="/"
-                  className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                <th
+                  scope="row"
+                  className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                 >
-                  Edit
-                </a>
-              </td>
-            </tr>
-            <tr className="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
-              <th
-                scope="row"
-                className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-              >
-                Apple MacBook Pro 17
-              </th>
-              <td colSpan="4" className="py-4 px-6">
-                lorem34
-              </td>
-              <td className="py-4 px-6">$2999</td>
-              <td className="py-4 px-6">
-                <a
-                  href="/"
-                  className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                >
-                  Edit
-                </a>
-              </td>
-            </tr>
+                  {item.mission_name}
+                </th>
+                <td colSpan="4" className="py-4 px-6">
+                  {item.description}
+                </td>
+                <td className="py-4 px-6">$2999</td>
+                <td className="py-4 px-6">
+                  <a
+                    href="/"
+                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                  >
+                    Edit
+                  </a>
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
