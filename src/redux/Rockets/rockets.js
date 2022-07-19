@@ -16,7 +16,6 @@ const rocketSlice = createSlice({
   initialState,
   extraReducers: {
     [fetchRockets.pending]: (state) => {
-      /* eslint-disable no-param-reassign */
       state.loading = true;
     },
     [fetchRockets.fulfilled]: (state, action) => {
@@ -31,3 +30,4 @@ const rocketSlice = createSlice({
 });
 
 export default rocketSlice.reducer;
+export const allRockets = (state) => state.myRockets.rockets;
