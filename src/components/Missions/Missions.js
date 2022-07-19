@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../../index.css';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchMissions } from '../../redux/Missions/missions';
 
 function Missions() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchMissions());
+  }, [dispatch]);
+  const missions = useSelector((state) => state.mymissons.missions);
+  console.log('missions=', missions);
   return (
     <>
       <div className="overflow-x-auto relative shadow-md sm:rounded-lg">
