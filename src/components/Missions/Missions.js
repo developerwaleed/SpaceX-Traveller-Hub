@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import '../../index.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchMissions } from '../../redux/Missions/missions';
-import Button from '../Button/Button';
+import { fetchMissions, reserve } from '../../redux/Missions/missions';
+// import Button from './Button';
 import Status from '../Status/Status';
 
 function Missions() {
@@ -11,6 +11,17 @@ function Missions() {
     dispatch(fetchMissions());
   }, [dispatch]);
   const missions = useSelector((state) => state.mymissons.missions);
+  const handleReservation = (e) => {
+    e.preventDefault();
+    const { id } = e.target;
+    const text = e.target.innerText;
+    let reserveStatus;
+    if (text === 'Join') {
+      reserveStatus = false;
+    } else if (text === 'Cancel') reserveStatus = true;
+    // dispatch(reserve(id, reserved: !reseved));
+    dispatch(reserve({ id, reserved: !reserveStatus }));
+  };
   return (
     <>
       <div className="overflow-x-auto relative shadow-md sm:rounded-lg">
@@ -54,7 +65,26 @@ function Missions() {
                     href="/"
                     className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                   >
-                    <Button />
+                    {item.reserved ? (
+                      <button
+                        type="button"
+                        id={item.mission_id}
+                        className="bg-red-500 hover:bg-red-200 text-white font-semibold hover:text-white py-2 px-4 border  hover:border-transparent rounded text-xs"
+                        onClick={(e) => handleReservation(e)}
+                      >
+                        Cancel
+                      </button>
+                    ) : (
+                      <button
+                        type="button"
+                        id={item.mission_id}
+                        reserved={item.reserved}
+                        className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded text-xs"
+                        onClick={(e) => handleReservation(e)}
+                      >
+                        Join
+                      </button>
+                    )}
                   </a>
                 </td>
               </tr>
