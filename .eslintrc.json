@@ -19,7 +19,9 @@
     "react/react-in-jsx-scope": "off",
     "import/no-unresolved": "off",
     "no-shadow": "off",
-    "no-param-reassign": 0
+    "no-param-reassign": 0,
+    "max-len": "off",
+    "jsx-a11y/label-has-for":"off"
   },
   "ignorePatterns": [
     "dist/",

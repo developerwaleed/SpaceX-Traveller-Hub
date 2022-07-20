@@ -6,8 +6,8 @@ import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline';
 import Planet from '../../asset/planet.png';
 
 const navigation = [
-  { name: 'Rocket', href: '/', current: true },
-  { name: 'Mission', href: '/', current: false },
+  { name: 'Rocket', to: '/', current: true },
+  { name: 'Mission', to: '/Mission', current: false },
 ];
 
 function classNames(...classes) {
@@ -34,28 +34,31 @@ export default function NavBar() {
               </div>
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex-shrink-0 flex items-center">
-                  <img
-                    className="block lg:hidden h-8 w-auto"
-                    src={Planet}
-                    alt="Workflow"
-                  />
-                  <img
-                    className="hidden lg:block h-8 w-auto"
-                    src={Planet}
-                    alt="Workflow"
-                  />
+
+                  <NavLink to="/">
+                    <img
+                      className="block lg:hidden h-8 w-auto"
+                      src={Planet}
+                      alt="Workflow"
+                    />
+                    <img
+                      className="hidden lg:block h-8 w-auto"
+                      src={Planet}
+                      alt="Workflow"
+                    />
+                  </NavLink>
                 </div>
                 <div className="hidden sm:block sm:ml-6">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
                       <NavLink
-                        to={item.name}
-                        key={item.name}
                         className={({ isActive }) => (isActive
                           ? 'bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium'
                           : 'text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium')}
+                        key={item.name}
+                        to={item.to}
                       >
-                        <a href={item.href}>{item.name}</a>
+                        {item.name}
                       </NavLink>
                     ))}
                   </div>
@@ -95,45 +98,30 @@ export default function NavBar() {
                       className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
                       Style="z-index: 100;"
                     >
-                      <NavLink to="/myprofile">
-                        <Menu.Item>
-                          {({ active }) => (
-                            <a
-                              href="/"
-                              className={classNames(
-                                active ? 'bg-gray-100' : '',
-                                'block px-4 py-2 text-sm text-gray-700',
-                              )}
-                            >
-                              Your Profile
-                            </a>
-                          )}
-                        </Menu.Item>
-                      </NavLink>
                       <Menu.Item>
                         {({ active }) => (
-                          <a
-                            href="/"
+                          <NavLink
+                            to="/myprofile"
                             className={classNames(
                               active ? 'bg-gray-100' : '',
                               'block px-4 py-2 text-sm text-gray-700',
                             )}
                           >
-                            Settings
-                          </a>
+                            Your Profile
+                          </NavLink>
                         )}
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <a
-                            href="/"
+                          <NavLink
+                            to="/goodbye"
                             className={classNames(
                               active ? 'bg-gray-100' : '',
                               'block px-4 py-2 text-sm text-gray-700',
                             )}
                           >
-                            Sign out
-                          </a>
+                            Goodbye
+                          </NavLink>
                         )}
                       </Menu.Item>
                     </Menu.Items>

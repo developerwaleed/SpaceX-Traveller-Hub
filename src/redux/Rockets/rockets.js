@@ -6,21 +6,44 @@ const initialState = {
   error: '',
 };
 
-export const fetchRockets = createAsyncThunk('rockets/fetchRockets', async () => {
-  const response = await fetch('https://api.spacexdata.com/v3/rockets');
-  const data = await response.json();
-  return data;
-});
+export const fetchRockets = createAsyncThunk(
+  'rockets/fetchRockets',
+  async () => {
+    const response = await fetch('https://api.spacexdata.com/v3/rockets');
+    const data = await response.json();
+    return data;
+  },
+);
 const rocketSlice = createSlice({
   name: 'rockets',
   initialState,
+  reducers: {
+    reserveRocket(state, action) {
+      const newState = state.rockets.map((item) => {
+        if (item.id === action.payload.id) {
+          return { ...item, reserved: action.payload.reserved };
+        }
+        return item;
+      });
+      return { ...state, rockets: newState };
+    },
+  },
+
   extraReducers: {
     [fetchRockets.pending]: (state) => {
       state.loading = true;
     },
-    [fetchRockets.fulfilled]: (state, action) => {
+    [fetchRockets.fulfilled]: (state, { payload }) => {
       state.loading = false;
-      state.rockets = action.payload;
+      const newState = payload.map((rocket) => ({
+        id: rocket.id,
+        rocket_name: rocket.rocket_name,
+        description: rocket.description,
+        flickr_images: rocket.flickr_images,
+        reserved: false,
+      }));
+      state.rockets = newState;
+      state.error = '';
     },
     [fetchRockets.pending]: (state) => {
       state.loading = false;
@@ -30,3 +53,4 @@ const rocketSlice = createSlice({
 });
 
 export default rocketSlice.reducer;
+export const { reserveRocket } = rocketSlice.actions;
