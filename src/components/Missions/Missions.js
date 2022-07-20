@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react';
-import '../../index.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchMissions, reserve } from '../../redux/Missions/missions';
-// import Button from './Button';
 import Status from '../Status/Status';
+import '../../index.css';
 
 function Missions() {
   const dispatch = useDispatch();

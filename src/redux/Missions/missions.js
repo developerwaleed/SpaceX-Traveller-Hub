@@ -10,6 +10,7 @@ const initialState = {
 export const fetchMissions = createAsyncThunk(
   'missions/fetchMissions',
   async () => {
+    console.log('api called');
     const response = await fetch('https://api.spacexdata.com/v3/missions');
     const data = await response.json();
     return data;
