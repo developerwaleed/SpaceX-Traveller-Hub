@@ -1,32 +1,36 @@
-import { createSlice } from '@reduxjs/toolkit';
+/* eslint-disable no-param-reassign */
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const initialState = {
-  rockets: [
-    {
-      id: 1,
-      mission_name: 'mission1',
-      description: 'this is misson 1',
-      misson_status: 'Status 1',
-    },
-    {
-      id: 2,
-      mission_name: 'mission2',
-      description: 'this is mission 2',
-      misson_status: 'Status 2',
-    },
-    {
-      id: 3,
-      mission_name: 'mission',
-      description: 'this is mission 3',
-      misson_status: 'Status 3',
-    },
-  ],
+  loading: false,
+  missions: [],
+  error: '',
 };
 
+export const fetchMissions = createAsyncThunk(
+  'missions/fetchMissions',
+  async () => {
+    const response = await fetch('https://api.spacexdata.com/v3/missions');
+    const data = await response.json();
+    return data;
+  },
+);
 const missionSlice = createSlice({
   name: 'missions',
   initialState,
-  reducers: {},
+  extraReducers: {
+    [fetchMissions.pending]: (state) => {
+      state.loading = true;
+    },
+    [fetchMissions.fulfilled]: (state, action) => {
+      state.loading = false;
+      state.missions = action.payload;
+    },
+    [fetchMissions.pending]: (state) => {
+      state.loading = false;
+      state.error = 'error occured';
+    },
+  },
 });
 
 export default missionSlice.reducer;
