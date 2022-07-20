@@ -6,11 +6,11 @@ function MyProfile() {
   const filteredArr = missions.filter((item) => item.reserved);
   return (
     <>
+      {/* Table for Missions */}
       <table className="table-fixed flex flex-col justify-center items-center">
         <thead>
           <tr>
             <th className="w-1/2 px-10 py-2">My Missions</th>
-            <th className="w-1/4 px-10 py-2">My Rockets</th>
           </tr>
         </thead>
         <tbody>
