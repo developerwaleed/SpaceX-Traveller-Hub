@@ -3,6 +3,7 @@ import { Fragment } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline';
+
 import Planet from '../../asset/planet.png';
 
 const navigation = [
@@ -34,7 +35,6 @@ export default function NavBar() {
               </div>
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex-shrink-0 flex items-center">
-
                   <NavLink to="/">
                     <img
                       className="block lg:hidden h-8 w-auto"
