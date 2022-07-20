@@ -8,13 +8,12 @@ const Rockets = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchRockets());
-  }, [dispatch]);
-  const rockets = useSelector((state) => state.myRockets.rockets);
-  console.log(rockets);
+  }, []);
+  const rockets = useSelector((state) => state.rockets);
   return (
-    <div className="card bg-gray-100">
+    <div className="card bg-gray-50">
       {
-        rockets.map((data) => (
+        rockets.rockets?.map((data) => (
           <Rocket key={data.id} data={data} />
         ))
       }
