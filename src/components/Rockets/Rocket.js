@@ -12,7 +12,7 @@ const Rocket = ({ data }) => (
       <div className="description-div">
         <h1 className="name-div">{data.rocket_name}</h1>
         <p className="desc-div">{data.description}</p>
-        <Button title="Reserve Rocket" />
+        <Button title="Reserve Rocket" style={{ backgroundColor: '#3434dd', color: '#fff' }} />
       </div>
     </div>
   </>
