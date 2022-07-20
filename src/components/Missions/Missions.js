@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import '../../index.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchMissions } from '../../redux/Missions/missions';
+import Button from '../Button/Button';
 
 function Missions() {
   const dispatch = useDispatch();
@@ -50,7 +51,7 @@ function Missions() {
                     href="/"
                     className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                   >
-                    Edit
+                    <Button />
                   </a>
                 </td>
               </tr>
