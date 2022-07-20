@@ -13,7 +13,7 @@ const Rocket = ({ data }) => (
       <div className="description-div">
         <h1 className="name-div">{data.rocket_name}</h1>
         <p className="desc-div">
-          {data.reserved ? (
+          {!data.reserved ? (
             ''
           ) : (
             <span className="bg-blue-200 text-white-500 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-white-500">
