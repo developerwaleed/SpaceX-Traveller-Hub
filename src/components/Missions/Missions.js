@@ -3,6 +3,7 @@ import '../../index.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchMissions } from '../../redux/Missions/missions';
 import Button from '../Button/Button';
+import Status from '../Status/Status';
 
 function Missions() {
   const dispatch = useDispatch();
@@ -45,7 +46,9 @@ function Missions() {
                 <td colSpan="4" className="py-4 px-6">
                   {item.description}
                 </td>
-                <td className="py-4 px-6">$2999</td>
+                <td className="py-4 px-6">
+                  <Status />
+                </td>
                 <td className="py-4 px-6">
                   <a
                     href="/"
