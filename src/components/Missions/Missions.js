@@ -18,10 +18,10 @@ function Missions() {
     dispatch(reserve({ id, reserved: !reserveStatus }));
   };
   return (
-    <>
-      <div className="overflow-x-auto relative shadow-md sm:rounded-lg">
-        <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-          <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+    <div className="contain">
+      <div>
+        <table>
+          <thead>
             <tr>
               <th scope="col" className="py-3 px-6 text-center">
                 Missions
@@ -63,6 +63,7 @@ function Missions() {
                     {item.reserved ? (
                       <button
                         type="button"
+                        className="bg-transparent hover:bg-red-500  text-red-700 font-semibold hover:text-white py-1 px-4 border border-red-500  hover:border-transparent rounded text-xs"
                         id={item.mission_id}
                         className="bg-transparent hover:bg-red-500  text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500  hover:border-transparent rounded text-xs"
                         onClick={(e) => handleReservation(e)}
@@ -71,6 +72,7 @@ function Missions() {
                       </button>
                     ) : (
                       <button
+                        className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-1 px-6 border border-blue-500 hover:border-transparent rounded text-xs"
                         type="button"
                         id={item.mission_id}
                         reserved={item.reserved}

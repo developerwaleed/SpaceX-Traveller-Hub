@@ -7,10 +7,24 @@ function MyProfile() {
   return (
     <>
       {/* Table for Missions */}
-      <table className="table-fixed flex flex-col justify-center items-center">
+      <table className="table-fixed data-div">
         <thead>
-          <tr>
-            <th className="w-1/2 px-10 py-2">My Missions</th>
+          <tr className="head">
+            <th className="w-1/2 px-10 py-2 title">Rockets Reserved</th>
+          </tr>
+        </thead>
+        <tbody>
+          {reservedRocket.map((item) => (
+            <tr key={item.id}>
+              <td className="border px-10 py-2">{item.rocket_name}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <table className="table-fixed data-div">
+        <thead>
+          <tr className="head">
+            <th className="w-1/2 px-10 py-2 title">Missions Joined</th>
           </tr>
         </thead>
         <tbody>
