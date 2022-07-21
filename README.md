@@ -1,6 +1,6 @@
 # SPACEX TRAVELLERS HUB 👋
 
-![App Screenshot](design.png)
+![App Screenshot](Mockup.png)
 
 ## Welcome! 👋
 
