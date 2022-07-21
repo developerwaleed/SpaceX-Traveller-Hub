@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import '../../index.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { reserve, fetchMissions } from '../../redux/Missions/missions';
+import { fetchMissions } from '../../redux/Missions/missions';
 import Status from '../Status/Status';
+import MissionButton from './MissionButton';
 import './Missions.css';
 
 function Missions() {
@@ -14,16 +15,6 @@ function Missions() {
       dispatch(fetchMissions());
     }
   }, []);
-  const handleReservation = (e) => {
-    e.preventDefault();
-    const { id } = e.target;
-    const text = e.target.innerText;
-    let reserveStatus;
-    if (text === 'Join Mission') {
-      reserveStatus = false;
-    } else if (text === 'Cancel Mission') reserveStatus = true;
-    dispatch(reserve({ id, reserved: !reserveStatus }));
-  };
   return (
     <div className="contain">
       <div className="overflow-x-auto relative shadow-md sm:rounded-lg">
@@ -46,34 +37,24 @@ function Missions() {
           </thead>
           <tbody>
             {missions.missions.map((item) => (
-              <tr className="bg-white border-b dark:bg-gray-900 dark:border-gray-700" key={item.mission_id}>
-                <td className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">{item.mission_name}</td>
+              <tr
+                className="bg-white border-b dark:bg-gray-900 dark:border-gray-700"
+                key={item.mission_id}
+              >
+                <td className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                  {item.mission_name}
+                </td>
                 <td colSpan="4">{item.description}</td>
                 <td>
                   <Status reserved={item.reserved} />
                 </td>
                 <td>
                   <a href="/">
-                    {item.reserved ? (
-                      <button
-                        type="button"
-                        className="bg-transparent hover:bg-red-500  text-red-700 font-semibold hover:text-white py-1 px-4 border border-red-500  hover:border-transparent rounded text-xs"
-                        id={item.mission_id}
-                        onClick={(e) => handleReservation(e)}
-                      >
-                        Cancel Mission
-                      </button>
-                    ) : (
-                      <button
-                        className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-1 px-6 border border-blue-500 hover:border-transparent rounded text-xs"
-                        type="button"
-                        id={item.mission_id}
-                        reserved={item.reserved}
-                        onClick={(e) => handleReservation(e)}
-                      >
-                        Join Mission
-                      </button>
-                    )}
+                    <MissionButton
+                      title={item.reserved ? 'Cancel Mission' : 'Join Mission'}
+                      reserved={item.reserved}
+                      id={item.mission_id}
+                    />
                   </a>
                 </td>
               </tr>
