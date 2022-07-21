@@ -1,13 +1,26 @@
-# SPACEX TRAVELLERS HUB
+# SPACEX TRAVELLERS HUB 👋
+
+![App Screenshot](design.png)
+
+## Welcome! 👋
+
+> This Website is all about Booking the rockets 😉 and Reserving the missions for you on a click!!  😄
+
+## Built With ✔️
+
+- HTML 😄
+- Css 🔥
+- JavaScript ES6 😋
+- REACT 🔥🔥🔥🔥🔥
+- Redux 😉
+
+
 
 SpaceX Travellers Hub is a web application that fetches a package from an api, a missions and Rockets. a  traveller can reserve a rocket  and join a mission, incase of unsatisfactory you can cancel the rocket and re-reserve. joined mission status is showed as well as the rocket status. all reserved rockets and joined missions are displayed on the profile.
 
-## Screenshot
-![App Screenshot](design.png)
-
 ## Demo
 
-![herokuapp](https://spacex-travellers-hub.herokuapp.com/)
+[herokuapp](https://spacex-travellers-hub.herokuapp.com/)
 
 
 ## Run Locally
@@ -37,19 +50,14 @@ Start the server
   npm run start
 ```
 
+### Authors
 
-## Josphat Kiploman
+### Authors
 
-- [@Github](https://github.com/Josphat205)
-
-- [@Linkedin](https://www.linkedin.com/in/josphat-kiploman-797430236/)
-
-## Waleed Amjad
-
-- [@Github](https://github.com/caasperr)
-
- 
-- [@Linkedin](https://www.linkedin.com/in/developerwaleed/)
+| 👤 Name | Github | Twitter | LinkedIn |
+|------|--------|---------|----------|
+|Waleed Amjad|[@caasperr](https://github.com/caasperr)|[@developerwaleed](https://twitter.com/developerwaleed)|[@Waleed Amjad]([https://www.linkedin.com/in/waleed-amjad-51930014a/](https://www.linkedin.com/in/developerwaleed/))|
+|Josphat Kiploman|[@Josphat205](https://github.com/Josphat205)||[@josphat-kiploman](https://www.linkedin.com/in/josphat-kiploman-797430236/)|
 
 
 ## 🤝 Contributing
