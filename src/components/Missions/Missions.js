@@ -65,7 +65,6 @@ function Missions() {
                         type="button"
                         className="bg-transparent hover:bg-red-500  text-red-700 font-semibold hover:text-white py-1 px-4 border border-red-500  hover:border-transparent rounded text-xs"
                         id={item.mission_id}
-                        className="bg-transparent hover:bg-red-500  text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500  hover:border-transparent rounded text-xs"
                         onClick={(e) => handleReservation(e)}
                       >
                         Cancel Mission
@@ -76,7 +75,6 @@ function Missions() {
                         type="button"
                         id={item.mission_id}
                         reserved={item.reserved}
-                        className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-6 border border-blue-500 hover:border-transparent rounded text-xs"
                         onClick={(e) => handleReservation(e)}
                       >
                         Join Mission
@@ -89,7 +87,7 @@ function Missions() {
           </tbody>
         </table>
       </div>
-    </>
+    </div>
   );
 }
 
