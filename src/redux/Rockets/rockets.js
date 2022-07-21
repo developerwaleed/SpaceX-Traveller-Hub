@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const initialState = {
-  loading: true,
+  loading: false,
   rockets: [],
   error: '',
 };
