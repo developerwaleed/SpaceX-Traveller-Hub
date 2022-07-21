@@ -2,9 +2,6 @@
 
 SpaceX Travellers Hub is a web application that fetches a package from an api, a missions and Rockets. a  traveller can reserve a rocket  and join a mission, incase of unsatisfactory you can cancel the rocket and re-reserve. joined mission status is showed as well as the rocket status. all reserved rockets and joined missions are displayed on the profile.
 
-## Logo
-![Logo](planet.png)
-
 ## Screenshot
 ![App Screenshot](design.png)
 
