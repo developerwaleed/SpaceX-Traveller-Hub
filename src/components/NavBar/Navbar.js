@@ -7,7 +7,7 @@ import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline';
 import Planet from '../../asset/planet.png';
 
 const navigation = [
-  { name: 'Rocket', to: '/Rocket', current: true },
+  { name: 'Rocket', to: '/Rocket', current: false },
   { name: 'Mission', to: '/Mission', current: false },
 ];
 
@@ -139,7 +139,7 @@ export default function NavBar() {
                 <Disclosure.Button
                   key={item.name}
                   as="a"
-                  href={item.href}
+                  href={item.to}
                   className={classNames(
                     item.current
                       ? 'bg-gray-900 text-white'
