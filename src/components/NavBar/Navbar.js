@@ -7,7 +7,7 @@ import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline';
 import Planet from '../../asset/planet.png';
 
 const navigation = [
-  { name: 'Rocket', to: '/', current: true },
+  { name: 'Rocket', to: '/Rocket', current: true },
   { name: 'Mission', to: '/Mission', current: false },
 ];
 
@@ -35,7 +35,7 @@ export default function NavBar() {
               </div>
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex-shrink-0 flex items-center">
-                  <NavLink to="/">
+                  <NavLink to="/Welcome">
                     <img
                       className="block lg:hidden h-8 w-auto"
                       src={Planet}

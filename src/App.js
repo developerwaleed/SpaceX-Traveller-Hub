@@ -7,7 +7,7 @@ import NavBar from './components/NavBar/Navbar';
 import MyProfile from './components/NavBar/MyProfile';
 import Rockets from './components/Rockets/Rockets';
 import Missions from './components/Missions/Missions';
-import GoodBye from './components/NavBar/GoodBye';
+import Welcome from './components/NavBar/Welcome';
 
 function App() {
   const dispatch = useDispatch();
@@ -18,10 +18,11 @@ function App() {
     <>
       <NavBar />
       <Routes>
-        <Route path="*" element={<Rockets to="/Rocket" />} />
+        <Route path="*" element={<Welcome to="/Welcome" />} />
         <Route path="/myprofile" element={<MyProfile />} />
         <Route path="/Mission" element={<Missions />} />
-        <Route path="/goodbye" element={<GoodBye />} />
+        <Route path="/Rocket" element={<Rockets />} />
+        <Route path="/Welcome" element={<Welcome />} />
       </Routes>
     </>
   );
