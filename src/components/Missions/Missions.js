@@ -3,7 +3,7 @@ import '../../index.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { reserve } from '../../redux/Missions/missions';
 import Status from '../Status/Status';
-
+import './Missions.css';
 function Missions() {
   const dispatch = useDispatch();
   const missions = useSelector((state) => state.mymissons.missions);
@@ -23,43 +23,24 @@ function Missions() {
         <table>
           <thead>
             <tr>
-              <th scope="col" className="py-3 px-6 text-center">
-                Missions
-              </th>
-              <th scope="col" colSpan="4" className="py-3 px-6 text-center">
+              <th scope="col">Missions</th>
+              <th scope="col" colSpan="4">
                 Description
               </th>
-              <th scope="col" className="py-3 px-6 text-center">
-                Status
-              </th>
-              <th scope="col" className="py-3 px-7 text-center">
-                Action
-              </th>
+              <th scope="col">Status</th>
+              <th scope="col">Action</th>
             </tr>
           </thead>
           <tbody>
             {missions.map((item) => (
-              <tr
-                className="bg-white border-b dark:bg-gray-900 dark:border-gray-700"
-                key={item.mission_id}
-              >
-                <th
-                  scope="row"
-                  className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                >
-                  {item.mission_name}
-                </th>
-                <td colSpan="4" className="py-4 px-6">
-                  {item.description}
-                </td>
-                <td className="py-4 px-5">
+              <tr key={item.mission_id}>
+                <th scope="row">{item.mission_name}</th>
+                <td colSpan="4">{item.description}</td>
+                <td>
                   <Status reserved={item.reserved} />
                 </td>
-                <td className="py-4 px-10">
-                  <a
-                    href="/"
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                  >
+                <td>
+                  <a href="/">
                     {item.reserved ? (
                       <button
                         type="button"
@@ -90,5 +71,4 @@ function Missions() {
     </div>
   );
 }
-
 export default Missions;

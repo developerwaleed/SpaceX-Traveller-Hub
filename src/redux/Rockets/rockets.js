@@ -1,11 +1,10 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const initialState = {
-  loading: false,
+  loading: true,
   rockets: [],
   error: '',
 };
-
 export const fetchRockets = createAsyncThunk(
   'rockets/fetchRockets',
   async () => {
@@ -28,7 +27,6 @@ const rocketSlice = createSlice({
       return { ...state, rockets: newState };
     },
   },
-
   extraReducers: {
     [fetchRockets.pending]: (state) => {
       state.loading = true;
@@ -51,6 +49,5 @@ const rocketSlice = createSlice({
     },
   },
 });
-
 export default rocketSlice.reducer;
 export const { reserveRocket } = rocketSlice.actions;
