@@ -8,7 +8,6 @@ function Button({ title, reserved, id }) {
   const dispatch = useDispatch();
   const handleReserve = (e) => {
     e.preventDefault();
-    console.log(id);
     dispatch(reserveRocket({ id, reserved: !reserved }));
   };
   return (

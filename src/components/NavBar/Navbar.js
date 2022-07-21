@@ -54,11 +54,9 @@ export default function NavBar() {
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
                       <NavLink
-                        className={({ isActive }) =>
-                          isActive
-                            ? 'bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium'
-                            : 'text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
-                        }
+                        className={({ isActive }) => (isActive
+                          ? 'bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium'
+                          : 'text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium')}
                         key={item.name}
                         to={item.to}
                       >
@@ -108,7 +106,7 @@ export default function NavBar() {
                             to="/myprofile"
                             className={classNames(
                               active ? 'bg-gray-100' : '',
-                              'block px-4 py-2 text-sm text-gray-700'
+                              'block px-4 py-2 text-sm text-gray-700',
                             )}
                           >
                             Your Profile
@@ -121,7 +119,7 @@ export default function NavBar() {
                             to="/goodbye"
                             className={classNames(
                               active ? 'bg-gray-100' : '',
-                              'block px-4 py-2 text-sm text-gray-700'
+                              'block px-4 py-2 text-sm text-gray-700',
                             )}
                           >
                             Goodbye
@@ -146,7 +144,7 @@ export default function NavBar() {
                     item.current
                       ? 'bg-gray-900 text-white'
                       : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                    'block px-3 py-2 rounded-md text-base font-medium'
+                    'block px-3 py-2 rounded-md text-base font-medium',
                   )}
                   aria-current={item.current ? 'page' : undefined}
                 >

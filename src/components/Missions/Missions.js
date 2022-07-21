@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../../index.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { reserve } from '../../redux/Missions/missions';
+import { reserve, fetchMissions } from '../../redux/Missions/missions';
 import Status from '../Status/Status';
 import './Missions.css';
+
 function Missions() {
+  const missions = useSelector((state) => state.mymissons);
+  const { loading } = missions;
   const dispatch = useDispatch();
-  const missions = useSelector((state) => state.mymissons.missions);
+  useEffect(() => {
+    if (loading) {
+      dispatch(fetchMissions());
+    }
+  }, []);
   const handleReservation = (e) => {
     e.preventDefault();
     const { id } = e.target;
@@ -32,7 +39,7 @@ function Missions() {
             </tr>
           </thead>
           <tbody>
-            {missions.map((item) => (
+            {missions.missions.map((item) => (
               <tr key={item.mission_id}>
                 <th scope="row">{item.mission_name}</th>
                 <td colSpan="4">{item.description}</td>
