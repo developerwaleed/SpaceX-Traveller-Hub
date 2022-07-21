@@ -49,10 +49,10 @@ Start the server
 
 ## Waleed Amjad
 
-- [@Github]('https://github.com/caasperr')
+- [@Github](https://github.com/caasperr)
 
  
-- [@Linkedin]('https://www.linkedin.com/in/developerwaleed/')
+- [@Linkedin](https://www.linkedin.com/in/developerwaleed/)
 
 
 ## 🤝 Contributing
