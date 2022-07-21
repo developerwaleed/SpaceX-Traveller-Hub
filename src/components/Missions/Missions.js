@@ -3,7 +3,6 @@ import '../../index.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { reserve } from '../../redux/Missions/missions';
 import Status from '../Status/Status';
-import './Missions.css';
 
 function Missions() {
   const dispatch = useDispatch();
@@ -24,29 +23,49 @@ function Missions() {
         <table>
           <thead>
             <tr>
-              <th scope="col">Missions</th>
-              <th scope="col" colSpan="4">
+              <th scope="col" className="py-3 px-6 text-center">
+                Missions
+              </th>
+              <th scope="col" colSpan="4" className="py-3 px-6 text-center">
                 Description
               </th>
-              <th scope="col">Status</th>
-              <th scope="col">Action</th>
+              <th scope="col" className="py-3 px-6 text-center">
+                Status
+              </th>
+              <th scope="col" className="py-3 px-7 text-center">
+                Action
+              </th>
             </tr>
           </thead>
           <tbody>
             {missions.map((item) => (
-              <tr key={item.mission_id}>
-                <th scope="row">{item.mission_name}</th>
-                <td colSpan="4">{item.description}</td>
-                <td>
+              <tr
+                className="bg-white border-b dark:bg-gray-900 dark:border-gray-700"
+                key={item.mission_id}
+              >
+                <th
+                  scope="row"
+                  className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                >
+                  {item.mission_name}
+                </th>
+                <td colSpan="4" className="py-4 px-6">
+                  {item.description}
+                </td>
+                <td className="py-4 px-5">
                   <Status reserved={item.reserved} />
                 </td>
-                <td>
-                  <a href="/">
+                <td className="py-4 px-10">
+                  <a
+                    href="/"
+                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                  >
                     {item.reserved ? (
                       <button
                         type="button"
                         className="bg-transparent hover:bg-red-500  text-red-700 font-semibold hover:text-white py-1 px-4 border border-red-500  hover:border-transparent rounded text-xs"
                         id={item.mission_id}
+                        className="bg-transparent hover:bg-red-500  text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500  hover:border-transparent rounded text-xs"
                         onClick={(e) => handleReservation(e)}
                       >
                         Cancel Mission
@@ -57,6 +76,7 @@ function Missions() {
                         type="button"
                         id={item.mission_id}
                         reserved={item.reserved}
+                        className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-6 border border-blue-500 hover:border-transparent rounded text-xs"
                         onClick={(e) => handleReservation(e)}
                       >
                         Join Mission
@@ -69,7 +89,8 @@ function Missions() {
           </tbody>
         </table>
       </div>
-    </div>
+    </>
   );
 }
+
 export default Missions;
