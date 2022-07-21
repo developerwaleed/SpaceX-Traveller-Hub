@@ -1,3 +1,4 @@
+/* eslint-disable react/forbid-prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Rockets.css';
@@ -32,7 +33,7 @@ const Rocket = ({ data }) => (
 );
 Rocket.propTypes = {
   id: PropTypes.number,
-  data: PropTypes.string,
+  data: PropTypes.object,
   rocket_name: PropTypes.string,
   description: PropTypes.string,
   flickr_images: PropTypes.string,

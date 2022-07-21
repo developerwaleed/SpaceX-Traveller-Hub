@@ -26,7 +26,7 @@ function MissionButton(props) {
 }
 
 MissionButton.propTypes = {
-  id: PropTypes.number,
+  id: PropTypes.string,
   title: PropTypes.string,
   reserved: PropTypes.bool,
 };
