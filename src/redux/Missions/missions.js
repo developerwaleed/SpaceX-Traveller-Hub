@@ -2,7 +2,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const initialState = {
-  loading: false,
+  loading: true,
   missions: [],
   error: '',
 };

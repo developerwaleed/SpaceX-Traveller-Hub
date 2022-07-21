@@ -6,17 +6,18 @@ import './Rockets.css';
 
 const Rockets = () => {
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchRockets());
-  }, []);
   const rockets = useSelector((state) => state.rockets);
+  const { loading } = rockets;
+  useEffect(() => {
+    if (loading) {
+      dispatch(fetchRockets());
+    }
+  }, []);
   return (
     <div className="card bg-gray-50">
-      {
-        rockets.rockets?.map((data) => (
-          <Rocket key={data.id} data={data} />
-        ))
-      }
+      {rockets.rockets?.map((data) => (
+        <Rocket key={data.id} data={data} />
+      ))}
     </div>
   );
 };

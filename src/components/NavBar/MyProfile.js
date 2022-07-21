@@ -1,11 +1,14 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import './MyProfile.css';
 
 function MyProfile() {
   const missions = useSelector((state) => state.mymissons.missions);
+  const rockets = useSelector((state) => state.rockets.rockets);
   const filteredArr = missions.filter((item) => item.reserved);
+  const reservedRocket = rockets.filter((item) => item.reserved);
   return (
-    <>
+    <div className="table-div">
       {/* Table for Missions */}
       <table className="table-fixed data-div">
         <thead>
@@ -35,8 +38,7 @@ function MyProfile() {
           ))}
         </tbody>
       </table>
-    </>
+    </div>
   );
 }
-
 export default MyProfile;

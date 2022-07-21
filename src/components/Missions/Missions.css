@@ -2,33 +2,27 @@
   width: 95%;
   margin: 0 auto;
 }
-
 .contain table {
   width: 100%;
   border-collapse: collapse;
 }
-
 /* Zebra striping */
 .contain tr:nth-of-type(odd) {
   background: rgb(253, 249, 249);
 }
-
 .contain th {
   background-color: rgb(249 250 251);
   color: black;
   font-weight: bold;
 }
-
 .contain td,
 th {
   padding: 6px;
   text-align: left;
 }
-
 tr{
   border-bottom-width: 1px;
 }
-
 @media
   only screen and (max-width: 760px),
   (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -41,16 +35,13 @@ tr{
   tr {
     display: block;
   }
-
   /* Hide table headers (but not display: none;, for accessibility) */
  .contain  tr { border: 1px solid #ccc; }
-
  .contain  thead tr {
     position: absolute;
     top: -9999px;
     left: -9999px;
   }
-
  .contain  td {
     /* Behave  like a "row" */
     border: none;
@@ -58,11 +49,9 @@ tr{
     position: relative;
     padding-left: 50%;
   }
-
   .contain td::before {
     /* Now like a table header */
     position: absolute;
-
     /* Top/left values mimic padding */
     top: 6px;
     left: 6px;

@@ -1,5 +1,4 @@
 import React from 'react';
-
 import PropTypes from 'prop-types';
 import './Rockets.css';
 import Button from './Button';
@@ -20,7 +19,6 @@ const Rocket = ({ data }) => (
               Reserved
             </span>
           )}
-
           {data.description}
         </p>
         <Button
@@ -32,7 +30,6 @@ const Rocket = ({ data }) => (
     </div>
   </>
 );
-
 Rocket.propTypes = {
   id: PropTypes.number,
   data: PropTypes.string,
