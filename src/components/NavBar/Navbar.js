@@ -138,7 +138,7 @@ export default function NavBar() {
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}
-                  as="a"
+                  as={NavLink}
                   href={item.to}
                   className={classNames(
                     item.current
