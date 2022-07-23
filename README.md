@@ -21,6 +21,7 @@ SpaceX Travellers Hub is a web application that fetches a package from an api, a
 ## Demo
 
 [herokuapp](https://spacex-travellers-hub.herokuapp.com/)
+[netlify](https://62dbece53e0238133d94702a--celadon-lamington-818c62.netlify.app/)
 
 
 ## Run Locally
