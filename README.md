@@ -57,7 +57,7 @@ Start the server
 
 | 👤 Name | Github | Twitter | LinkedIn |
 |------|--------|---------|----------|
-|Waleed Amjad|[@caasperr](https://github.com/caasperr)|[@developerwaleed](https://twitter.com/developerwaleed)|[@developerwaleed](https://www.linkedin.com/in/developerwaleed/)|
+|Waleed Amjad|[@caasperr](https://github.com/developerwaleed)|[@developerwaleed](https://twitter.com/developerwaleed)|[@developerwaleed](https://www.linkedin.com/in/developerwaleed/)|
 |Josphat Kiploman|[@Josphat205](https://github.com/Josphat205)||[@josphat-kiploman](https://www.linkedin.com/in/josphat-kiploman-797430236/)|
 
 
