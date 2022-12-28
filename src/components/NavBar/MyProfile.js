@@ -25,7 +25,7 @@ function MyProfile() {
             <table className="table-fixed data-div">
               <thead>
                 <tr className="head">
-                  <th className="w-1/2 px-10 py-2 title">Rockets Reserved</th>
+                  <th className="w-1/2 px-10 py-2 title">Rockets Reserved 🚀</th>
                 </tr>
               </thead>
               <tbody>
@@ -39,7 +39,7 @@ function MyProfile() {
           ) : (
             <table className="table-fixed data-div">
               <tr className="head">
-                <th className="w-1/2 px-10 py-2 title">No Rocket Booked</th>
+                <th className="w-1/2 px-10 py-2 title">No Rocket Booked 🚀</th>
               </tr>
             </table>
           )}
@@ -48,26 +48,13 @@ function MyProfile() {
             <table className="table-fixed data-div">
               <thead>
                 <tr className="head">
-                  <th className="w-1/2 px-10 py-2 title">Missions Joined</th>
+                  <th className="w-1/2 px-10 py-2 title">Missions Joined 🛰️</th>
                 </tr>
               </thead>
               <tbody>
                 {reservedMissions.map((item) => (
                   <tr key={item.missions_id}>
                     <td className="border px-10 py-2">{item.mission_name}</td>
-                    <td className="border px-10 py-2">
-                      {/* {item.reserved ? (
-                        <MissionButton
-                          title={
-                            item.reserved ? 'Cancel Mission' : 'Join Mission'
-                          }
-                          id={String(item.missions_id)}
-                          reserved={item.reserved}
-                        />
-                      ) : (
-                        ''
-                      )} */}
-                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -75,7 +62,7 @@ function MyProfile() {
           ) : (
             <table className="table-fixed data-div">
               <tr className="head">
-                <th className="w-1/2 px-10 py-2 title">No Missions Joined</th>
+                <th className="w-1/2 px-10 py-2 title">No Missions Joined 🛰️</th>
               </tr>
             </table>
           )}
