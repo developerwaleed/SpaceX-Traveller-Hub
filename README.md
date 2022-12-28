@@ -86,7 +86,7 @@ This projects aim is to serve as the Reservation site for its users!
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-[Click Here for live Version!](https://62dbece53e0238133d94702a--celadon-lamington-818c62.netlify.app/)
+[Click Here for live Version!](https://celadon-lamington-818c62.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
