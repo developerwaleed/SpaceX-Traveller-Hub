@@ -1,78 +1,216 @@
-# SPACEX TRAVELLERS HUB 👋
-
-![App Screenshot](Mockup.png)
-
-## Welcome! 👋
-
-> This Website is all about Booking the rockets 😉 and Reserving the missions for you on a click!!  😄
-
-## Built With ✔️
-
-- HTML 😄
-- Css 🔥
-- JavaScript ES6 😋
-- REACT 🔥🔥🔥🔥🔥
-- Redux 😉
-
-SpaceX Travellers Hub is a web application that uses an API to fetch the rockets and missions. The website allows its users to reserve the fetched missions and rockets. The user can cancel the reservations anytime. The reserved rockets and missions can be seen on my reservation menu! 😄
+<a name="readme-top"></a>
 
 
+<div align="center">
+  <img src="https://github.com/microverseinc/readme-template/blob/master/murple_logo.png" alt="logo" width="140"  height="auto" />
+  <br/>
+</div>
 
-## Demo
+<!-- TABLE OF CONTENTS -->
 
-[herokuapp](https://spacex-travellers-hub.herokuapp.com/)
-[netlify](https://62dbece53e0238133d94702a--celadon-lamington-818c62.netlify.app/)
+# 📗 Table of Contents
 
+<details>
+  <summary>Click to view contents</summary>
+  <ol>
+    <li>
+      <a href="#about-project">📖 About the Project</a>
+        <ul>
+          <li><a href="#video">📹 Video</a></li>
+          <li>
+            <a href="#built-with">🛠 Built With</a>
+            <ul>
+              <li><a href="#tech-stack">Tech Stack</a></li>
+              <li><a href="#key-features">Key Features</a></li>
+            </ul>
+          </li>
+          <li><a href="#live-demo">🚀 Live Demo</a></li>
+        </ul>
+    </li>
+    <li>
+      <a href="#getting-started">💻 Getting Started</a>
+      <ul>
+        <li><a href="#setup">Setup</a></li>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#install">Install</a></li>
+        <li><a href="#usage">Usage</a></li>
+        <li><a href="#run-tests">Run tests</a></li>
+        <li><a href="#deployment">Deployment</a></li>
+      </ul>
+    </li>
+    <li><a href="#authors">👥 Authors</a></li>
+    <li><a href="#future-features">🔭 Future Features</a></li>
+    <li><a href="#contributing">🤝 Contributing</a></li>
+    <li><a href="#support">⭐️ Show your support</a></li>
+    <li><a href="#acknowledgements">🙏 Acknowledgements</a></li>
+    <li><a href="#faq">❓ FAQ</a></li>
+    <li><a href="#license">📝 License</a></li>
+  </ol>
+</details>
 
-## Run Locally
+<!-- PROJECT DESCRIPTION -->
 
-Clone the project
+# 📖 GymFit <a name="about-project"></a>
 
-```bash
-  git clone git@github.com:caasperr/SpaceX-Traveller-Hub.git
-```
+**SPACEX TRAVELLERS HUB** is a web application that uses an API to fetch the rockets and missions. The website allows its users to reserve the fetched missions and rockets. The user can cancel the reservations anytime. The reserved rockets and missions can be seen on my reservation menu!.
 
-Go to the project directory
+<div align="center"><img src='./public/Mockup.png' width="700"></div>
 
-```bash
+## 🛠 Built With <a name="built-with"></a>
+
+### Tech Stack <a name="tech-stack"></a>
+
+- React
+- Redux
+- Tailwind CSS
+
+<details>
+<summary>Client</summary>
+  <ul>
+    <li><a href="https://reactjs.org/">React</a></li>
+  </ul>
+</details>
+
+<!-- Features -->
+
+### Key Features <a name="key-features"></a>
+
+This projects aim is to serve as the Reservation site for its users!
+
+- Consume Rest API
+- Save data in redux store
+- Render data from redux store
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+[Click Here for live Version!](https://62dbece53e0238133d94702a--celadon-lamington-818c62.netlify.app/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+To get a local copy up and running, follow these steps.
+
+### Prerequisites
+
+- Node Package Manager (npm)
+
+### Setup
+
+#### Github
+- Enter this url: [https://github.com/developerwaleed/SpaceX-Traveller-Hub](https://github.com/developerwaleed/SpaceX-Traveller-Hub) in your web browser.
+- Once opened navigate to the top left level of the project a green code download button will be visible on the righthand side.
+- Select the download Zip option from drop-down menu.
+- Once the download is complete you will be able to access my project locally.
+
+#### Local (Terminal)
+
+```sh
+  git clone https://github.com/developerwaleed/SpaceX-Traveller-Hub.git
   cd SpaceX-Traveller-Hub
 ```
 
-Install dependencies
+### Install
 
-```bash
+Install dependencies and gems in this project with:
+
+```sh
+  cd SpaceX-Traveller-Hub
   npm install
 ```
 
-Start the server
 
-```bash
-  npx eslint . --fix
-  npm run start
+### Usage
+
+To run the project, execute the following command:
+
+- Run `npm run start` or `npm start` to start a development server.
+
+### Run tests
+
+To run tests, run the following command:
+
+```
+npm run test
 ```
 
-### Authors
+### Deployment
 
-### Authors
+You can deploy this project using:
 
+- Github Pages
+- Netlify
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- AUTHORS -->
+## 👥 Authors <a name="author"></a>
 | 👤 Name | Github | Twitter | LinkedIn |
 |------|--------|---------|----------|
 |Waleed Amjad|[@caasperr](https://github.com/developerwaleed)|[@developerwaleed](https://twitter.com/developerwaleed)|[@developerwaleed](https://www.linkedin.com/in/developerwaleed/)|
 |Josphat Kiploman|[@Josphat205](https://github.com/Josphat205)||[@josphat-kiploman](https://www.linkedin.com/in/josphat-kiploman-797430236/)|
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🤝 Contributing
+<!-- FUTURE FEATURES -->
 
-Contributions, issues, and feature requests are welcome!
+## 🔭 Future Features <a name="future-features"></a>
 
-## Show your support
+- Currently none.
 
-Give a ⭐ if you like this project!
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 📝 License
+<!-- CONTRIBUTING -->
 
-This project is [MIT](./MIT.md) licensed.
+## 🤝 Contributing <a name="contributing"></a>
 
+Contributions are what makes the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue, feel free to check the [issues page](../../issues/).
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
+
+If you like this project. Don't forget to give it a ⭐️
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+- A big thanks to [@microverseinc](https://github.com/microverseinc) for the project idea, guidance and inspiration.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FAQ  -->
+
+## ❓ FAQ <a name="faq"></a>
+
+- **What inspired me to create this project?**
+
+  - The inspiration for this project came from microverse – a software development bootcamp where you work with teammates remotely on different projects.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
