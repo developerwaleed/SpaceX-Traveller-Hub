@@ -50,7 +50,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 GymFit <a name="about-project"></a>
+# 📖 SPACEX TRAVELLERS HUB <a name="about-project"></a>
 
 **SPACEX TRAVELLERS HUB** is a web application that uses an API to fetch the rockets and missions. The website allows its users to reserve the fetched missions and rockets. The user can cancel the reservations anytime. The reserved rockets and missions can be seen on my reservation menu!.
 
